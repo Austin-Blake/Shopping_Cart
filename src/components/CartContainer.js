@@ -1,12 +1,13 @@
 import React,{useEffect} from "react";
 import { connect } from 'react-redux';
 import CartItem from "./CartItem";
-import {CLEAR_CART, GET_TOTALS} from '../actions'
+import {CLEAR_CART, GET_TOTALS} from '../app/actions'
 
 const CartContainer = ({ cart = [], total, dispatch }) => {
   useEffect(() => {
     dispatch({type: GET_TOTALS})
-  });
+  }, [cart, dispatch]);
+  
   if (cart.length === 0) {
     return (
       <section className="cart">
@@ -46,6 +47,9 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
 
 
 const mapStateToProps = (state) => {
-  return {cart: state.cart, total: state.total};
+  return {
+    cart: state.cart,
+    total: state.total,
+  };
 }
 export default connect(mapStateToProps)(CartContainer);
