@@ -1,3 +1,7 @@
+A small shopping cart built with hard coded products. This was a guided YouTube tutorial to help me understand Redux. The application allows you to add or remove products from the shopping cart. 
+
+Built with React-Redux. Reducer formatted by switch statement, actions built with both actionCreators and hard coded, and the addition of Redux-DevTools.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
